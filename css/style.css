@@ -49,8 +49,10 @@
 #wrap #main #section1 .wrap .gap .container .slide-container .slide-view .slide-wrap .slide3 {background-image:url(../img/shop-slide-02.jpg);}
 
 /* main_section1 slide_화살표*/
-#wrap #main #section1 .wrap .gap .container .slide-container .prev-btn-wrap {z-index:2;position:absolute;top:50%;left:20px;margin-top:30px;width:60px;height:60px;color:#000;}
+#wrap #main #section1 .wrap .gap .container .slide-container .prev-btn-wrap {z-index:2;position:absolute;top:50%;left:50px;margin-top:-25px;width:50px;height:50px;transform:rotate(-45deg);border-top:2px solid #fff;border-left:2px solid #fff;}
 #wrap #main #section1 .wrap .gap .container .slide-container .prev-btn-wrap .prev-btn {display:block;width:100%;height:100%;}
+#wrap #main #section1 .wrap .gap .container .slide-container .next-btn-wrap {z-index:2;position:absolute;top:50%;right:50px;margin-top:-25px;width:50px;height:50px;transform:rotate(45deg);border-top:2px solid #fff;border-right:2px solid #fff;}
+#wrap #main #section1 .wrap .gap .container .slide-container .next-btn-wrap .next-btn {display:block;width:100%;height:100%;}
 
 
 /* footer */
