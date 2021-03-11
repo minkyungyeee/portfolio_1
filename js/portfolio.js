@@ -35,11 +35,12 @@
                 $slideWrap.stop().animate({left:-1903*cnt},0);
             }
 
-            resizeFn();
+            setTimeout(resizeFn,100);
             
             $win.resize(function(){
-                resizeFn();
+                setTimeout(resizeFn,100);
             });
+            
             function mainSlideFn(){
                 $slideWrap.stop().animate({left:-$winW*cnt},600,function(){
                     if(cnt>n-1){cnt=0}

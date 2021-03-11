@@ -1,44 +1,261 @@
-Corporate
-Startup
-Business
-Corporate
-Finance
-Application
-Consulting
-Digital agency
-SEO agency
-Events & conference
-Marketing agency
+[[[sub2]]]
+About
+Services
+Contact
+Additional pages
 
-Specialized
-Restaurant
-Architecture
-Hotel & resort
-Travel agency
-Yoga & meditation
-Gym & fitness
-Spa salon
-Cafe
-Home decor
-Interior design
+sub2-1
+About me
+About us
+Our story
+Who we are
 
-Portfolio
-Design agency
-Web agency
-Creative agency
-Freelancer
-Branding agency
-Photography
-Personal portfolio
-Vertical portfolio
-Interactive portfolio
-Split portfolio
-Creative portfolio
+sub2-2
+Our services
+What we offer
+Our process
 
-Other
-Furniture shop
-Fashion shop
-Magazine
-Lifestyle blog
-Classic blog
+sub2-3
+Contact simple
+Contact classic
+Contact modern
+
+sub2-4
+Our team
+Latest news
+Pricing packages
+Error 404
+Maintenance
+Coming soon
+Coming soon - V2
+FAQ's
+Search result
+
+[[[sub3]]]
+Portfolio classic
+Portfolio boxed
+Portfolio colorful
+Portfolio bordered
+Portfolio overlay
+Portfolio switch image
+Portfolio other
+Single project page
+
+sub3-1
+Classic 2 column
+Classic 3 column
+Classic 4 column
+Classic masonry
+Classic metro
+
+sub3-2
+Boxed 2 column
+Boxed 3 column
+Boxed 4 column
+Boxed masonry
+Boxed metro
+
+
+sub3-3
+Colorful 2 column
+Colorful 3 column
+Colorful 4 column
+Colorful masonry
+Colorful metro
+
+sub3-4
+Bordered 2 column
+Bordered 3 column
+Bordered 4 column
+Bordered masonry
+Bordered metro
+
+sub3-5
+Overlay 2 column
+Overlay 3 column
+Overlay 4 column
+Overlay masonry
+Overlay metro
+
+sub3-6
+Switch image 2 column
+Switch image 3 column
+Switch image 4 column
+Switch image masonry
+Switch image metro
+
+sub3-7
+Portfolio scattered
+Justified gallery
+Portfolio slider
+
+sub3-8
+Single project page 01
+Single project page 02
+Single project page 03
+Single project page 04
+Single project page 05
+
+[[[sub4]]]
+General
+Accordions
+Buttons
+Team
+Team carousel
+Clients
+Client carousel
+Subscribe
+Call to action
+Tab
+Google map
+Contact form
+Image gallery
+
+Content & infographics
+Progress bar
+Icon with text
+Over line icon box
+Custom icon with text
+Counters
+Countdown
+Pie charts
+Fancy text box
+Text box
+Fancy text
+
+Interactive
+Testimonials
+Testimonials carousel
+Video
+Interactive banners
+Services
+Info banner
+Rotate box
+Process step
+Instagram
+Parallax scrolling
+Text slider
+
+Text & containers
+Heading
+Drop caps
+Columns
+Blockquote
+Highlights
+Message box
+Social icons
+Lists
+Separators
+Pricing table
+
+[[[sub5]]]
+Header and menu
+Footer
+Page title
+Modal popup
+Icon packs
+Animations
+
+sub5-1
+Transparent header
+White header
+Dark header
+Header with top bar
+Header with push
+Center navigation
+Center logo
+Top logo
+One page navigation
+Hamburger menu
+Left menu
+Header type
+Mobile menu
+
+sub5-2
+Footer style 01
+Footer style 02
+Footer style 03
+Footer style 04
+Footer style 05
+Footer style 06
+Footer style 07
+Footer style 08
+Footer style 09
+Footer style 10
+Footer style 11
+Footer style 12
+
+sub5-3
+Left alignment
+Right alignment
+Center alignment
+Colorful style
+Big typography
+Parallax background
+Separate breadcrumbs
+Gallery background
+Background video
+Mini version
+
+sub5-4
+Simple modal
+Subscription
+Contact form
+Youtube video
+Vimeo video
+Google map
+
+sub5-5
+Icons mind line
+Icons mind solid
+Feather
+Font awesome
+ET line
+Themify
+Simple line
+
+[[[sub6]]]
+Blog grid
+Blog masonry
+Blog classic
+Blog simple
+Blog side image
 Blog metro
+Blog overlay image
+Blog modern
+Blog clean
+Blog widget
+Blog standard
+Post layout
+Post types
+
+sub6-12
+Blog post layout 01
+Blog post layout 02
+Blog post layout 03
+Blog post layout 04
+Blog post layout 05
+
+sub6-13
+Standard post
+Gallery post
+Slider post
+HTML5 video post
+Youtube video post
+Vimeo video post
+Audio post
+Blockquote post
+Full width post
+
+[[[sub7]]]
+Shop layout
+Shop wide
+Left sidebar
+Right sidebar
+Only categories
+Single product
+
+Utility pages
+Shopping cart
+Checkout
+Login / Register
