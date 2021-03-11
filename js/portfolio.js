@@ -12,7 +12,29 @@
                 that.section7Fn();
         },
         headerFn:function(){
+            var $navArea = $('#nav > ul > li');
+            var $mainBtn = $('#nav .main-btn');
+            var $subBtn = $('#nav .sub-btn');
+            var $sub = $('#nav .sub');
+            var $subSub = $('#nav .sub-sub');
 
+            $mainBtn.on({
+                mouseenter:function(){
+                    $(this).next().stop().show();
+                }
+            });
+            $navArea.on({
+                mouseleave:function(){
+                    $sub.stop().hide();
+                    $subSub.stop().hide();
+                }
+            });
+            $subBtn.on({
+                mouseenter:function(){
+                    $subSub.stop().hide();
+                    $(this).next().stop().show();
+                }
+            })
         },
         section1Fn:function(){
             var $win = $(window);
