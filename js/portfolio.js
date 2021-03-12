@@ -17,10 +17,12 @@
             var $subBtn = $('#nav .sub-btn');
             var $sub = $('#nav .sub');
             var $subSub = $('#nav .sub-sub');
+            var $asideBtn = $('#aside .aside-btn');
+            var $asideSub = $('#aside .aside-sub');
 
             $mainBtn.on({
                 mouseenter:function(){
-                    $(this).next().stop().show();
+                    $(this).stop().next().show();
                 }
             });
             $navArea.on({
@@ -32,7 +34,24 @@
             $subBtn.on({
                 mouseenter:function(){
                     $subSub.stop().hide();
-                    $(this).next().stop().show();
+                    $(this).stop().next().show();
+                }
+            });
+            $subSub.on({
+                mouseleave:function(){
+                    $subSub.stop().next().hide();
+                }
+            });
+
+            $asideBtn.on({
+                mouseenter:function(event){
+                    event.preventDefault();
+                    $(this).stop().next().show();
+                }
+            });
+            $asideSub.on({
+                mouseleave:function(){
+                    $(this).stop().hide();
                 }
             })
         },
