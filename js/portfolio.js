@@ -59,15 +59,20 @@
             var $win = $(window);
             var $winW = $(window).width();
             var $winH = $(window).height();
-            var $slide = $('#section1 .slide');
             var $sec1 = $('#section1');
-
+            var $slide = $('#section1 .slide');
+            var $slideView = $('#section1 .slide-view');
             var $slideWrap = $('#section1 .slide-wrap');
+
             var $nextBtn = $('#section1 .next-btn');
             var $prevBtn = $('#section1 .prev-btn');
             var cnt = 0;
             var n = $('#section1 .slide').length-2;
 
+            var setId = null;
+            var setId2 = null;
+            var t = 0;
+            // 슬라이드 크기 반응형
             function resizeFn(){
                 $winW = $(window).width();
                 $winH = $(window).height();
@@ -81,7 +86,7 @@
             $win.resize(function(){
                 setTimeout(resizeFn,100);
             });
-            
+            //슬라이드 동작
             function mainSlideFn(){
                 $slideWrap.stop().animate({left:-$winW*cnt},600,function(){
                     if(cnt>n-1){cnt=0}
@@ -99,20 +104,91 @@
             }
             $nextBtn.on({
                 click:function(){
-                    nextSlideCountFn();
+                    stopTimerFn();
+                    if(!$slideWrap.is(':animated')){
+                        nextSlideCountFn();
+                    }
                 }
             });
             $prevBtn.on({
                 click:function(){
-                    prevSlideCountFn();
+                    stopTimerFn();
+                    if(!$slideWrap.is(':animated')){
+                        prevSlideCountFn();
+                    }
                 }
             });
-            
+
+            //슬라이드 터치 스와이프
+            $slideView.swipe({
+                swipeLeft:function(){
+                    stopTimerFn();
+                    if(!$slideWrap.is(':animated')){
+                        nextSlideCountFn();
+                    }
+                },
+                swipeRight:function(){
+                    stopTimerFn();
+                    if(!$slideWrap.is(':animated')){
+                        prevSlideCountFn();
+                    }
+                }
+            });
+
+            //슬라이드 타이머 작동
+            function autoTimerFn(){
+                setId = setInterval(nextSlideCountFn,3000);
+            }
+
+            autoTimerFn();
+
+            function stopTimerFn(){
+                t = 0;
+                clearInterval(setId);
+                clearInterval(setId2);
+                setId2 = setInterval(function(){
+                    t ++;
+                    if(t>3){
+                        clearInterval(setId);
+                        clearInterval(setId2);
+                        t=0;
+                        nextSlideCountFn();
+                        autoTimerFn();
+                    }
+                },1000);
+            }
         },
         section2Fn:function(){
+            var $imgBox = $('#section2 .img-box');
+            var $moveBtn = $('#section2 .move-btn');
+
+            $imgBox.on({
+                mouseenter:function(){
+                    $imgBox.removeClass('addPointShow');
+                    $(this).addClass('addPointShow');
+                }
+            });
+            $imgBox.on({
+                mouseleave:function(){
+                    $imgBox.removeClass('addPointShow');
+                }
+            });
 
         },
         section3Fn:function(){
+            var $productImgBox = $('#section3 .product-img-box');
+
+            $productImgBox.on({
+                mouseenter:function(){
+                    $productImgBox.removeClass('addHoverDetail');
+                    $(this).addClass('addHoverDetail');
+                }
+            });
+            $productImgBox.on({
+                mouseleave:function(){
+                    $(this).removeClass('addHoverDetail');
+                }
+            })
 
         },
         section4Fn:function(){
