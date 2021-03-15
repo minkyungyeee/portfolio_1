@@ -159,32 +159,19 @@
             }
         },
         section2Fn:function(){
-            var $imgBox = $('#section2 .img-box');
-            var $moveBtn = $('#section2 .move-btn');
 
-            $imgBox.on({
-                mouseenter:function(){
-                    $imgBox.removeClass('addPointShow');
-                    $(this).addClass('addPointShow');
-                }
-            });
-            $imgBox.on({
-                mouseleave:function(){
-                    $imgBox.removeClass('addPointShow');
-                }
-            });
 
         },
         section3Fn:function(){
-            var $productImgBox = $('#section3 .product-img-box');
+            var $productBox = $('#section3 .product-box');
 
-            $productImgBox.on({
+            $productBox.on({
                 mouseenter:function(){
-                    $productImgBox.removeClass('addHoverDetail');
+                    $productBox.removeClass('addHoverDetail');
                     $(this).addClass('addHoverDetail');
                 }
             });
-            $productImgBox.on({
+            $productBox.on({
                 mouseleave:function(){
                     $(this).removeClass('addHoverDetail');
                 }
@@ -192,6 +179,68 @@
 
         },
         section4Fn:function(){
+            var $slideWrap = $('#section4 .slide-wrap');
+            var $slideView = $('#section4 .slide-view');
+            var cnt = 0;
+            var n = $('#section4 .slide').length-7; //6
+            var setId = null;
+            var setId2 = null;
+
+            function mainSlideFn(){
+                $slideWrap.stop().animate({left:-1903*cnt},600,function(){
+                    if(cnt>=n){cnt=0}
+                    if(cnt<0){cnt=n-1}
+                    $slideWrap.stop().animate({left:-1903*cnt},0)
+                });
+            }
+
+            function nextSlideCountFn(){
+                cnt ++;
+                mainSlideFn();
+            }
+
+            function prevSlideCountFn(){
+                cnt --;
+                mainSlideFn();
+            }
+
+            $slideView.swipe({
+                swipeLeft:function(){
+                    pauseFn();
+                    if(!$slideWrap.is(':animated')){
+                        nextSlideCountFn();
+                    }
+                },
+                swipeRight:function(){
+                    pauseFn();
+                    if(!$slideWrap.is(':animated')){
+                        prevSlideCountFn();
+                    }
+                }
+            });
+
+            function autoPlay(){
+                setId = setInterval(nextSlideCountFn,4000);
+            }
+
+            autoPlay();
+
+            function pauseFn(){
+                var t = 0;
+                clearInterval(setId);
+                clearInterval(setId2);
+                setId2 = setInterval(function(){
+                    t++;
+                    if(t>4){
+                        clearInterval(setId);
+                        clearInterval(setId2);
+                        t=0;
+                        nextSlideCountFn();
+                        autoPlay();
+                    }
+                },1000);
+            }
+
 
         },
         section5Fn:function(){
