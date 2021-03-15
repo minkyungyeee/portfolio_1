@@ -278,11 +278,45 @@
 #wrap #main #section6 .wrap .gap .container {width:100%;}
 #wrap #main #section6 .wrap .gap .container .client-box {width:100%;}
 #wrap #main #section6 .wrap .gap .container .client-box .client-log {float:left;width:25%;}
-#wrap #main #section6 .wrap .gap .container .client-box .client-log > a {display:block;}
-#wrap #main #section6 .wrap .gap .container .client-box .client-log > a > img {display:block;}
+#wrap #main #section6 .wrap .gap .container .client-box .client-log .log-gap {margin:0 15px;}
+#wrap #main #section6 .wrap .gap .container .client-box .client-log .log-gap > a {display:block;width:100%;}
+#wrap #main #section6 .wrap .gap .container .client-box .client-log .log-gap > a > img {display:block;width:100%;}
+
+
+/* main_section7*/
+#wrap #main #section7 {position:relative;width:100%;background:#fff;/* border-top:1px solid #e4e4e4;box-sizing:border-box;overflow:hidden; */}
+#wrap #main #section7 .wrap {width:100%;max-width:1170px;margin:0 auto;}
+#wrap #main #section7 .wrap .gap {margin:0 15px;}
+#wrap #main #section7 .wrap .gap .container {width:100%;background:#c99;height:177.5px;}
 
 /* footer */
-#wrap #footer {z-index:1;position:relative;width:100%;}
-#wrap #footer .wrap {}
-#wrap #footer .wrap .gap {}
-#wrap #footer .wrap .gap .container {}
+#wrap #footer {z-index:3;position:relative;width:100%;background:#000;padding-top:177.5px;margin-top:-88.75px;}
+#wrap #footer .wrap {width:100%;max-width:1170px;margin:0 auto;}
+#wrap #footer .wrap .gap {margin:0;}
+#wrap #footer .wrap .gap .container {width:100%;}
+/* footer _상단 메뉴*/
+#wrap #footer .wrap .gap .container .footer-top {padding-bottom:92.3px;font-family:'Poppins',sans-serif;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap {padding:0 15px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap {display:inline-block;width:15%;padding:0 15px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap:last-child {width:25%;padding:0 15px;height:198px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content {width:100%;text-align:left;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content > span {display:block;width:100%;font-size:15px;font-weight:500;line-height:200%;color:#fff;margin-bottom:20px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content > ul {width:100%;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content > ul > li {width:100%;margin-bottom:7px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content > ul > li > a {display:block;color:#828282;font-size:15px;font-weight:400;line-height:200%;transition:all .3s;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content > ul > li > a:hover {color:#fff;font-weight:500;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content > p {display:block;color:#828282;font-size:15px;font-weight:400;line-height:170%;margin-bottom:20px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content .email-wrap {position:relative;display:inline-block;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content .email-wrap .email {padding:13px 60px 13px 20px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content .email-wrap .email-box {position:absolute;top:1px;right:20px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .top-gap .footer-content .email-wrap .email-box i {font-size:18px;line-height:44px;}
+/* footer _하단 로고*/
+#wrap #footer .wrap .gap .container .footer-bottom {padding-bottom:40px;border-top:1px solid #828282;box-sizing:border-box;}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap {margin-top:40px;width:100%;}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .logo-box {float:left;width:33.3333%;}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .logo-box > a {width:100%;}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .logo-box > a > img{}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .copyright {display:inline-block;line-height:30px;}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .copyright > span {color:#828282;font-size:18px;font-weight:500;}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .copyright > span > a {color:#828282;font-size:18px;font-weight:500;width:85px;border-bottom:1px solid #828282;}
+#wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .credit-box {float:right;}

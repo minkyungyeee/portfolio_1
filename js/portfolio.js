@@ -179,12 +179,26 @@
 
         },
         section4Fn:function(){
+            var $win = $(window);
+            var $winW = $(window).innerWidth();
             var $slideWrap = $('#section4 .slide-wrap');
             var $slideView = $('#section4 .slide-view');
             var cnt = 0;
             var n = $('#section4 .slide').length-7; //6
             var setId = null;
             var setId2 = null;
+
+            // function resizeFn(){
+            //     $winW = $(window).width();
+            //     $slide.css({width:$winW/2,});
+            //     $slideWrap.stop().animate({left:-1903*cnt},0);
+            // }
+
+            // setTimeout(resizeFn,100);
+            
+            // $win.resize(function(){
+            //     setTimeout(resizeFn,100);
+            // });
 
             function mainSlideFn(){
                 $slideWrap.stop().animate({left:-1903*cnt},600,function(){
