@@ -188,7 +188,7 @@
 #wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .img-box > a.move-btn > i {font-size:13px;color:#fff;margin-left:1px;}
 /* main_section2_각 영역 오른쪽 텍스트 박스 */
 #wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .text-box {z-index:2;position:relative;margin-top:70px;width:163.6px;}
-#wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .text-box > h4 {color:#ab762b;font-weight:500;letter-spacing:1px;font-size:15px;line-height:200%;margin-bottom:10px;}
+#wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .text-box > h4 {color:#ab4f25;font-weight:500;letter-spacing:1px;font-size:15px;line-height:200%;margin-bottom:10px;}
 #wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .text-box > h3 {color:#232323;line-height:40px;letter-spacing:-1px;font-size:38PX;font-weight:400;}
 #wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .text-box > h3 > span {font-weight:600;}
 
@@ -199,7 +199,7 @@
 #wrap #main #section3 .wrap .gap .container {width:100%;}
 /* main_section3_title*/
 #wrap #main #section3 .wrap .gap .container .top-box {width:100%;text-align:center;margin-bottom:80px;}
-#wrap #main #section3 .wrap .gap .container .top-box > h4 {font-weight:500;font-size:15px;line-height:180%;color:#ab762b;letter-spacing:1px;}
+#wrap #main #section3 .wrap .gap .container .top-box > h4 {font-weight:500;font-size:15px;line-height:180%;color:#ab4f25;letter-spacing:1px;}
 #wrap #main #section3 .wrap .gap .container .top-box > h2 {font-weight:600;font-size:40px;line-height:150%;color:#232323;letter-spacing:-1px;}
 /* main_section3_product content*/
 #wrap #main #section3 .wrap .gap .container .content-box {width:100%;}
@@ -271,7 +271,7 @@
 #wrap #main #section5 .wrap .gap .container {width:100%;}
 /* main_section5_title*/
 #wrap #main #section5 .wrap .gap .container .top-box {width:100%;text-align:center;margin-bottom:80px;}
-#wrap #main #section5 .wrap .gap .container .top-box > h4 {font-weight:500;font-size:15px;line-height:180%;color:#ab762b;letter-spacing:1px;}
+#wrap #main #section5 .wrap .gap .container .top-box > h4 {font-weight:500;font-size:15px;line-height:180%;color:#ab4f25;letter-spacing:1px;}
 #wrap #main #section5 .wrap .gap .container .top-box > h2 {font-weight:600;font-size:40px;line-height:150%;color:#232323;letter-spacing:-1px;}
 /* main_section5_blog*/
 #wrap #main #section5 .wrap .gap .container .content-box {width:100%;}
