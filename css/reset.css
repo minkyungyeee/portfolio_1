@@ -10,6 +10,7 @@ em,i,address {font-style:normal;}
 ul,li {list-style:none;}
 .clearfix::after {content:'';display:block; clear:both;}
 .blind {display:block;text-indent:-2000px;overflow:hidden;}
+.hide {display:none;}
 a {color:#444;text-decoration:none;}
 a:hover {outline:0;}
 a:focus {outline:0;}
