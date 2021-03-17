@@ -19,6 +19,7 @@
             var $win = $(window);
             var result = null;
             var that = this;
+            var $logo = $('#header #logo > a > img');
 
             function wheelPositionFn(){
                 result = scrollPrev - scrollNew > 0 ? 'up' : 'down'
@@ -40,12 +41,29 @@
                 }
                 else{
                     if(result == 'up'){     //스크롤을 올리는중 (흰색배경으로 보여야함)
-                        if(that.btn == 1){  
-
+                        if(that.btn == 1){  //모바일버튼이 눌렸을때
+                            $('#header').removeClass('addHide');
+                            $('#header').removeClass('addBlack');
+                            $('#header').addClass('addShow');
+                        }
+                        else {
+                            $('#header').addClass('addBlack')
+                            $('#header').removeClass('addHide');
+                            $('#header').addClass('addShow');
+                            $logo.attr('src','./img/logo-black.png');
                         }
                     }
                     if(result == 'down'){   //스크롤을 내리는중 (안보여야함)
-
+                        if(that.btn == 1){
+                            $('#header').removeClass('addShow');
+                            $('#header').removeClass('addBlack');
+                            $('#header').removeClass('addHide');
+                        }
+                        else{
+                            $('#header').removeClass('addShow');
+                            $('#header').removeClass('addBlack');
+                            $('#header').addClass('addHide');
+                        }
                     }
 
                 }
@@ -119,7 +137,7 @@
                 $sub.stop().hide();
                 $subSub.stop().hide();
                 $bar.removeClass('addMobile');
-                $nav.stop().slideUp();
+                $nav.stop().slideUp(0);
 
                 $mainBtn.off('mouseenter');
                 $navArea.off('mouseleave');
@@ -148,7 +166,27 @@
 
             $win.resize(function(){
                 pcMobileFn();
-            })
+            });
+
+            $mainBtn.on({
+                click:function(event){
+                    event.preventDefault();
+                    if(mobile ==1){
+                        $sub.stop().slideUp(300);
+                        $(this).next().stop().slideToggle(300);
+                    }
+                }
+            });
+
+            $subBtn.on({
+                click:function(event){
+                    event.preventDefault();
+                    if(mobile ==1){
+                        $subSub.stop().slideUp(300);
+                        $(this).next().stop().slideToggle(300);
+                    }
+                }
+            });
 
             $mobileBtn.on({
                 click:function(){
@@ -157,7 +195,7 @@
 
                     return that.btn == 0 ? that.btn = 1 : that.btn = 0;
                 }
-            })
+            });
 
         },
         section1Fn:function(){
@@ -181,9 +219,21 @@
             function resizeFn(){
                 $winW = $(window).width();
                 $winH = $(window).height();
-                $slide.css({width:$winW, height:$winH});
+                $slide.css({width:$winW});
+
+                if( window.orientation == 0 || window.orientation == 180 ){
+                    $winH = $winH;
+                }
+                else if (window.orientation == 90 || window.orientation == -90 ){
+                    if($winW > 980){
+                        $winH = $winH;
+                    }
+                    else{
+                        $winH = 600;
+                    }
+                }
                 $sec1.css({width:$winW, height:$winH});
-                $slideWrap.stop().animate({left:-1903*cnt},0);
+                $slideWrap.stop().animate({left:-$winW*cnt},0);
             }
 
             setTimeout(resizeFn,100);
