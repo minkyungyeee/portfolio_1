@@ -354,15 +354,17 @@
             }
         },
         section2Fn:function(){
-
+            $(window).scroll(function(){
+                if($(window).scrollTop() >= $('#section2').offset().top-800){
+                    //console.log($('#section2').offset().top);
+                }
+            })
 
         },
         section3Fn:function(){
             var $productBox = $('#section3 .product-box');
             var $likeBtn = $('#section3 .like-btn');
-            var $winW = $(window).innerWidth();
-            var pc = 0;
-            var mobile = 0;
+
 
             $productBox.on({
                 mouseenter:function(){
@@ -385,61 +387,6 @@
                     $(this).toggleClass('addLike');
                 }
             });
-
-            // function pcOptionFn(){
-            //     $productBox.on({
-            //         mouseenter:function(){
-            //             $productBox.removeClass('addHoverDetail');
-            //             $(this).addClass('addHoverDetail');
-            //         },
-            //         mouseleave:function(){
-            //             $(this).removeClass('addHoverDetail');
-            //         }
-            //     });
-            // }
-
-            // function mobileOptionFn(){
-            //     $productBox.off('mouseenter','mouseleave');
-            //     $likeBtn.off('mouseenter','mouseleave');
-            // }
-
-            // function pcMobileFn(){
-            //     $winW = $(window).innerWidth();
-            //     if($winW > 980){
-            //         pc = 1;
-            //         mobile = 0;
-            //         pcOptionFn();
-            //     }
-            //     else{
-            //         pc = 0;
-            //         mobile = 1;
-            //         mobileOptionFn();
-            //     }
-            // }
-
-            // setTimeout(pcMobileFn,100);
-
-            // $(window).resize(function(){
-            //     setTimeout(pcMobileFn,100);
-            // })
-
-            // $productBox.on({
-            //     click:function(event){
-            //         event.preventDefault();
-            //         if(mobile == 1){
-            //             $productBox.removeClass('addHoverDetail');
-            //             $(this).toggleClass('addHoverDetail');
-            //         }
-            //     }
-            // });
-
-            // $likeBtn.on({
-            //     click:function(event){
-            //         event.preventDefault();
-            //             $(this).toggleClass('addLike');
-            //     }
-            // });
-
         },
         section4Fn:function(){
             var $win = $(window);
@@ -569,7 +516,8 @@
                 },
                 click:function(event){
                     event.preventDefault();
-                    $(this).toggleClass('addBg');
+                    $instaBtn.removeClass('addBg');
+                    $(this).addClass('addBg');
                 }
             });
 
@@ -583,6 +531,7 @@
             });
 
             function snsSlideFn(){
+                $winW = $(window).innerWidth();
                 if($winW <= 660){
                     $slideWrap.stop().animate({left:-165*cnt},600, function(){
                         if(cnt>n-1){cnt=0}

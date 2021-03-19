@@ -351,17 +351,17 @@
 
 /* main_section7*/
 #wrap #main #section7 {z-index:2;position:relative;width:100%;background:transparent;overflow:visible;}
-#wrap #main #section7 .wrap {width:100%;max-width:1170px;margin:0 auto;}
+#wrap #main #section7 .wrap {width:100%;}
 #wrap #main #section7 .wrap .gap {margin:0 15px;}
 #wrap #main #section7 .wrap .gap .container {width:100%;}
 #wrap #main #section7 .wrap .gap .container .slide-cotainer {position:relative;width:100%;}
-#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view {z-index:1;position:relative;width:100%;overflow:hidden;}
+#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view {z-index:1;position:relative;width:calc(192.5px*6);overflow:hidden;margin:0 auto;padding-left:15px;}
 #wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap {position:relative;left:0;width:calc(192.5px*24);margin-left:calc(-192.5px*8);}
-#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide {float:left;position:relative;width:177.5px;height:177.5px;margin:0 15px 0 0;}
-#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content {width:100%;height:100%;}
-#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn {width:100%;height:100%;}
-#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn > img {z-index:1;position:relative;width:100%;height:100%;transition:all .6s;}
-#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn > span  {z-index:2;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0);text-align:center;line-height:178px;}
+#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide {float:left;position:relative;width:192.5px;}
+#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content {width:100%;margin:0 15px 0 0;}
+#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn {width:100%;}
+#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn > img {z-index:1;position:relative;width:177.5px;transition:all .6s;}
+#wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn > span  {z-index:2;position:absolute;top:0;left:0;width:177.5px;background:rgba(0,0,0,0);text-align:center;line-height:178px;}
 #wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn.addBg > span  {background:rgba(0,0,0,.5);}
 #wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn > span > i {font-size:20px;color:rgba(255,255,255,0);transition:all .6s;}
 #wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view .slide-wrap .slide .content a.insta-btn.addBg > span > i {color:rgba(255,255,255,1);}
