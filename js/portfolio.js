@@ -354,11 +354,29 @@
             }
         },
         section2Fn:function(){
+            var $conLi = $('#section2 .content-wrap');
+            var st1 = null;
+            var st2 = null;
+            var st3 = null;
+
             $(window).scroll(function(){
-                if($(window).scrollTop() >= $('#section2').offset().top-800){
-                    //console.log($('#section2').offset().top);
+                if($(window).scrollTop() >= $('#section2').offset().top-3000){
+                    //consolo.log($('#section2').offset().top);
+                    st1 = setTimeout(function(){
+                        $conLi.eq(0).addClass('addScroll');
+                    },100);
+                    st2 = setTimeout(function(){
+                        $conLi.eq(1).addClass('addScroll');
+                    },200);
+                    st3 = setTimeout(function(){
+                        $conLi.eq(2).addClass('addScroll');
+                    },300);
                 }
-            })
+                if($(window).scrollTop() <= 20){
+                    $conLi.removeClass('addScroll');
+                }
+            });
+
 
         },
         section3Fn:function(){
@@ -533,17 +551,17 @@
             function snsSlideFn(){
                 $winW = $(window).innerWidth();
                 if($winW <= 660){
-                    $slideWrap.stop().animate({left:-165*cnt},600, function(){
+                    $slideWrap.stop().animate({left:(-165*cnt)-15},600, function(){
                         if(cnt>n-1){cnt=0}
                         if(cnt<0){cnt=n-1}
-                        $slideWrap.stop().animate({left:-165*cnt},0)
+                        $slideWrap.stop().animate({left:(-165*cnt)-15},0)
                     });
                 }
                 else {
-                    $slideWrap.stop().animate({left:-192.5*cnt},600, function(){
+                    $slideWrap.stop().animate({left:(-192.5*cnt)-15},600, function(){
                         if(cnt>n-1){cnt=0}
                         if(cnt<0){cnt=n-1}
-                        $slideWrap.stop().animate({left:-192.5*cnt},0)
+                        $slideWrap.stop().animate({left:(-192.5*cnt)-15},0)
                     });
                 }
             }
