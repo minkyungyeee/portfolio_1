@@ -7,6 +7,34 @@
 
 #wrap {z-index:1;position:relative;}
 #wrap.addStop {position:fixed;}
+
+/* modal */
+#wrap #modal {display:none;z-index:4;position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,.7)}
+#wrap #modal.addOpen {display:block;}
+#wrap #modal .wrap {width:100%;max-width:680px;margin:0 auto;overflow: hidden;}
+#wrap #modal .wrap .gap {padding:29.92776058vh 0;}
+#wrap #modal .wrap .gap .container {position:relative;width:100%;background:#fff;}
+#wrap #modal .wrap .gap .container .left-box {float:left;width:60%;}
+#wrap #modal .wrap .gap .container .left-box .box-gap {padding:84px;}
+#wrap #modal .wrap .gap .container .left-box .box-gap > h3 {font-size:20px;font-weight:500;line-height:130%;margin-bottom:10px;}
+#wrap #modal .wrap .gap .container .left-box .box-gap > p {font-size:15px;font-weight:400;line-height:150%;color:#828282;margin-bottom:30px;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap {position:relative;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email {padding:12px 60px 12px 15px;font-size:14px;border:1px solid #e4e4e4;box-sizing: border-box;color:#e4e4e4;letter-spacing:-1px;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email-box {position:absolute;top:13px;right:0.525486075vw;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email-box > i {font-size:16px;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .label {margin-top:30px;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .label > a > span {display:inline-block;width:10px;height:10px;border:1px solid #828282;text-align:center;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .label > a > span > i {display:none;font-size:10px;margin-top:-3px;}
+#wrap #modal .wrap .gap .container .left-box .box-gap .label > a.addClick > span > i {display:inline-block;}
+
+#wrap #modal .wrap .gap .container .left-box .box-gap .label > a > h4 {margin-left:10px;display:inline-block;font-size:13px;color:#828282;cursor:default;}
+
+#wrap #modal .wrap .gap .container .right-box {float:left;width:40%;}
+#wrap #modal .wrap .gap .container .right-box .box-gap {width:100%;height:100%;}
+#wrap #modal .wrap .gap .container .right-box .box-gap > img {z-index:1;position:relative;width:100%;}
+#wrap #modal .wrap .gap .container .right-box .box-gap > a {z-index:2;position:absolute;top:10px;right:10px;}
+#wrap #modal .wrap .gap .container .right-box .box-gap > a > i {display:block;color:#fff;font-size:15px;}
+
 /* header */
 #wrap #header {z-index:3;position:fixed;top:0;left:0;width:100%;height:80px;background:rgba(255,255,255,0);font-family:'Poppins',sans-serif;}
 #wrap #header.addHide {top:-80px;}
@@ -239,7 +267,13 @@
 #wrap #main #section3 .wrap .gap .container .content-box .content-box-gap {padding:0 15px;}
 #wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul {width:100%;}
 #wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul > li {float:left;width:20%;padding:15px;box-sizing:border-box;}
-#wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul > li .product-box {margin-bottom:45px;overflow:hidden;}
+#wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul > li .product-box {margin-bottom:45px;overflow:hidden;transform:scale(0);opacity:0;}
+#wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul > li .product-box.addScroll {transform:scale(1);opacity:1;animation:aniP .6s;}
+@keyframes aniP {
+    0% {transform:scale(0);opacity:0;}
+    100% {transform:scale(1);opacity:1;}
+}
+
 /* main_section3_product Image*/
 #wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul > li .product-box .product-img-box {position:relative;width:100%;overflow:hidden;}
 #wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul > li .product-box .product-img-box .product-img {position:relative;display:block;width:100%;transition:all .6s;}
@@ -418,10 +452,12 @@
 #wrap #footer .wrap .gap .container .footer-bottom .bottom-gap .credit-box {float:right;width:30%;text-align:right;}
 
 
-
+/* page-move */
 #wrap #main #page-move {z-index:3;position:fixed;bottom:40px;right:40px;}
 #wrap #main #page-move.addTop {display:none;}
 #wrap #main #page-move .page-up-box {display:inline-block;}
 #wrap #main #page-move .page-up-box > a {display:block;width:35px;height:35px;background:#fff;border-radius:50%;text-align:center;line-height:33px;box-shadow:2px 2px 15px rgba(0,0,0,.2),-3px -3px 14px rgba(0,0,0,.2);transition:all .6s;}
 #wrap #main #page-move .page-up-box > a:hover {transform:scale(1.2);}
 #wrap #main #page-move .page-up-box > a > i {color:#828282;font-size:13px;}
+
+

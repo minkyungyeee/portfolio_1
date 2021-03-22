@@ -4,6 +4,7 @@
         init:function(){
             var that = this;
                 that.scrollEvent();
+                that.popUpFn();
                 that.headerFn();
                 that.section1Fn();
                 that.section2Fn();
@@ -98,7 +99,40 @@
             });
 
         },
+        popUpFn:function(){
+            var $pop = $('#modal');
+            var $box = $('#modal .container')
+            var $close = $('#modal .close');
+            var $checkBox = $('#modal .check-box');
 
+            $(document).ready(function(){
+                $pop.addClass('addOpen');
+            });
+            $pop.on({
+                click:function(){
+                    $(this).removeClass('addOpen');
+                }
+            });
+            $box.on({
+                click:function(event){
+                    event.stopPropagation();
+                }
+            });
+            $close.on({
+                click:function(event){
+                    event.preventDefault();
+                    $pop.removeClass('addOpen');
+                }
+            });
+            $checkBox.on({
+                click:function(event){
+                    event.preventDefault();
+                    $checkBox.toggleClass('addClick');
+                }
+            });
+        
+
+        },
         headerFn:function(){
             var $win = $(window);
             var $nav = $('#nav');
@@ -359,6 +393,7 @@
             var st2 = null;
             var st3 = null;
 
+            $conLi.removeClass('addScroll');
             $(window).scroll(function(){
                 if($(window).scrollTop() >= $('#section2').offset().top-3000){
                     //consolo.log($('#section2').offset().top);
@@ -382,7 +417,16 @@
         section3Fn:function(){
             var $productBox = $('#section3 .product-box');
             var $likeBtn = $('#section3 .like-btn');
-
+            var st0 = null;
+            var st1 = null;
+            var st2 = null;
+            var st3 = null;
+            var st4 = null;
+            var st5 = null;
+            var st6 = null;
+            var st7 = null;
+            var st8 = null;
+            var st9 = null;
 
             $productBox.on({
                 mouseenter:function(){
@@ -405,6 +449,46 @@
                     $(this).toggleClass('addLike');
                 }
             });
+            $productBox.removeClass('addScroll');
+            $(window).scroll(function(){
+                if($(window).scrollTop() >= $('#section3').offset().top-3000){
+                    st0 = setTimeout(function(){
+                        $productBox.eq(0).addClass('addScroll');
+                    },100);
+                    st1 = setTimeout(function(){
+                        $productBox.eq(1).addClass('addScroll');
+                    },300);
+                    st2 = setTimeout(function(){
+                        $productBox.eq(2).addClass('addScroll');
+                    },500);
+                    st3 = setTimeout(function(){
+                        $productBox.eq(3).addClass('addScroll');
+                    },700);
+                    st4 = setTimeout(function(){
+                        $productBox.eq(4).addClass('addScroll');
+                    },900);
+                    st5 = setTimeout(function(){
+                        $productBox.eq(5).addClass('addScroll');
+                    },1100);
+                    st6 = setTimeout(function(){
+                        $productBox.eq(6).addClass('addScroll');
+                    },1300);
+                    st7 = setTimeout(function(){
+                        $productBox.eq(7).addClass('addScroll');
+                    },1500);
+                    st8 = setTimeout(function(){
+                        $productBox.eq(8).addClass('addScroll');
+                    },1700);
+                    st9 = setTimeout(function(){
+                        $productBox.eq(9).addClass('addScroll');
+                    },1900);
+
+                }
+                if($(window).scrollTop() <= 20){
+                    $productBox.removeClass('addScroll');
+                }
+            });
+
         },
         section4Fn:function(){
             var $win = $(window);

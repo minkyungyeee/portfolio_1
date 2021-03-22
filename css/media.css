@@ -14,9 +14,6 @@
     #wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .text-box > h3 {color:#232323;line-height:120%;letter-spacing:-1px;font-size:3.166666667vw;font-weight:400;}
     #wrap #main #section2 .wrap .gap .container > ul > li .content-gap .content > ul .text-box > h3 > span {font-weight:400;}
 
-
-
-
     /* main_section3_product content*/
     #wrap #main #section3 .wrap .gap .container .content-box .content-box-gap > ul > li {width:25%;}
 
@@ -45,9 +42,6 @@
     /* main_section1 slide_화살표*/
     #wrap #main #section1 .wrap .gap .container .slide-container .prev-btn-wrap {display:none;}
     #wrap #main #section1 .wrap .gap .container .slide-container .next-btn-wrap {display:none;}
-
-
-   
 
     /* main_section3_product content*/
     #wrap #main #section3 .wrap .gap {margin:0 2.5vw;}
@@ -91,6 +85,25 @@
 }
 
 @media all and (max-width:980px){
+    /* modal*/
+    #wrap #modal .wrap {max-width:500px;}
+    #wrap #modal .wrap .gap .container {position:relative;}   
+    #wrap #modal .wrap .gap .container .left-box {float:none;width:100%;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap > h3 {font-size:20px;font-weight:500;line-height:130%;margin-bottom:10px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap > p {font-size:15px;font-weight:400;line-height:150%;color:#828282;margin-bottom:30px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap {position:relative;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email {width:100%;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email-box {right:1.530612245vw;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email-box > i {font-size:16px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .label {margin-top:30px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .label > span {display:inline-block;width:10px;height:10px;border:1px solid #828282;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .label > h4 {margin-left:10px;display:inline-block;font-size:13px;color:#828282;}
+
+    #wrap #modal .wrap .gap .container .right-box {float:none;}
+    #wrap #modal .wrap .gap .container .right-box .box-gap > img {display:none;}
+    #wrap #modal .wrap .gap .container .right-box .box-gap > a > i {color:#000;}
+
+
     /* header */
     #wrap #header {background:rgba(255,255,255,1);transition:all .3s;}
     #wrap #header .wrap .gap {margin:0;}
@@ -201,6 +214,23 @@
 }
 
 @media all and (max-width:660px){
+    /* modal*/
+    #wrap #modal .wrap {max-width:300px;}
+    #wrap #modal .wrap .gap {padding:37.15170279vh 0;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap {padding:30px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap > h3 {font-size:18px;margin-bottom:10px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap > p {font-size:13px;margin-bottom:30px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email {width:100%;font-size:12px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email-box > i {font-size:13px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .label {margin-top:30px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .label > a > span {width:8px;height:8px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .label > a > span > i {font-size:4px;margin-top:-6px;}
+    #wrap #modal .wrap .gap .container .left-box .box-gap .label > a > h4 {margin-left:10px;display:inline-block;font-size:13px;color:#828282;}
+
+    #wrap #modal .wrap .gap .container .right-box {float:none;}
+    #wrap #modal .wrap .gap .container .right-box .box-gap > img {display:none;}
+    #wrap #modal .wrap .gap .container .right-box .box-gap > a > i {color:#000;}
+
     /* section2_박스 하나씩 나오게 */
     #wrap #main #section2 .wrap .gap .container > ul > li {float:none;width:100%;}
     #wrap #main #section2 .wrap .gap .container > ul > li .content-gap {margin:0;}
