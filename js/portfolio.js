@@ -100,11 +100,22 @@
 
         },
         popUpFn:function(){
+            var $win = $(window);
+            var $winH = $(window).innerHeight();
             var $pop = $('#modal');
             var $box = $('#modal .container')
             var $close = $('#modal .close');
             var $checkBox = $('#modal .check-box');
 
+            function resize(){
+                $winH = $(window).innerHeight();
+                $pop.css({height:$winH});
+            }
+            setTimeout(resize,100);
+            $win.resize(function(){
+                setTimeout(resize,100);
+            });
+            
             $(document).ready(function(){
                 $pop.addClass('addOpen');
             });
@@ -395,8 +406,8 @@
 
             $conLi.removeClass('addScroll');
             $(window).scroll(function(){
+
                 if($(window).scrollTop() >= $('#section2').offset().top-3000){
-                    //consolo.log($('#section2').offset().top);
                     st1 = setTimeout(function(){
                         $conLi.eq(0).addClass('addScroll');
                     },100);
@@ -449,7 +460,9 @@
                     $(this).toggleClass('addLike');
                 }
             });
+
             $productBox.removeClass('addScroll');
+
             $(window).scroll(function(){
                 if($(window).scrollTop() >= $('#section3').offset().top-3000){
                     st0 = setTimeout(function(){
