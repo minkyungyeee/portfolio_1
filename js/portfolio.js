@@ -1,6 +1,7 @@
 ;(function($){
     var pofol = {
         btn:0,
+        n:0,
         init:function(){
             var that = this;
                 that.scrollEvent();
@@ -50,45 +51,60 @@
                     $('#header').removeClass('addShow');
                     $('#header').removeClass('addHide');
                     $('#header').removeClass('addBlack');
-                    $('#page-move').addClass('addTop');
+                    $('#page-move').removeClass('addTop');
                     $('#wrap').removeClass('addStop');
                     
                     if($winW > 980){
-                        $logo.attr('src','./img/logo-white.png');
+                        $logo.attr('src','./new_img/logo-white.png');
                     }
                     else{
-                        $logo.attr('src','./img/logo-neon-orange.png');
+                        $logo.attr('src','./new_img/logo-color.png');
                     }
                 }
                 else{
                     if(result == 'up'){     //스크롤을 올리는중 (흰색배경으로 보여야함)
-                        if(that.btn == 1){  //모바일버튼이 눌렸을때
+                        if(that.btn == 1 && that.n == 1){  //모바일버튼이 눌렸을때
                             $('#header').removeClass('addHide');
                             $('#header').removeClass('addBlack');
                             $('#header').addClass('addShow');
                             $('#wrap').addClass('addStop');
                         }
-                        else {
+                        else if(that.btn == 0 && that.n == 1){
                             $('#header').addClass('addBlack')
                             $('#header').removeClass('addHide');
                             $('#header').addClass('addShow');
-                            $logo.attr('src','./img/logo-black.png');
+                            $('#wrap').removeClass('addStop');
+                            $logo.attr('src','./new_img/logo-black.png');
                             $('#page-move').removeClass('addTop');
+                        }
+                        else if(that.btn == 0 && that.n == 0) {
+                            $('#header').addClass('addBlack')
+                            $('#header').removeClass('addHide');
+                            $('#header').addClass('addShow');
+                            $logo.attr('src','./new_img/logo-black.png');
+                            $('#page-move').addClass('addTop');
                             $('#wrap').removeClass('addStop');
                         }
                     }
                     if(result == 'down'){   //스크롤을 내리는중 (안보여야함)
-                        if(that.btn == 1){
+                        if(that.btn == 1 && that.n == 1){
                             $('#header').removeClass('addShow');
                             $('#header').removeClass('addBlack');
                             $('#header').removeClass('addHide');
                             $('#wrap').addClass('addStop');
                         }
-                        else{
+                        else if(that.btn == 0 && that.n == 1){
                             $('#header').removeClass('addShow');
                             $('#header').removeClass('addBlack');
                             $('#header').addClass('addHide');
+                            $('#wrap').removeClass('addStop');
                             $('#page-move').removeClass('addTop');
+                        }
+                        else if(that.btn == 0 && that.n == 0) {
+                            $('#header').removeClass('addShow');
+                            $('#header').removeClass('addBlack');
+                            $('#header').addClass('addHide');
+                            $('#page-move').addClass('addTop');
                             $('#wrap').removeClass('addStop');
                         }
                     }
@@ -100,17 +116,33 @@
 
         },
         popUpFn:function(){
+            var $win = $(window);
+            var $winH = $(window).innerHeight();
             var $pop = $('#modal');
             var $box = $('#modal .container')
             var $close = $('#modal .close');
             var $checkBox = $('#modal .check-box');
 
+            function resize(){
+                $winH = $(window).innerHeight();
+                $pop.css({height:$winH});
+                
+            }
+            resize();
+            setTimeout(resize,100);
+
+            $win.resize(function(){
+                setTimeout(resize,100);
+            });
+            
             $(document).ready(function(){
                 $pop.addClass('addOpen');
+                $('#wrap').addClass('addModal');
             });
             $pop.on({
                 click:function(){
                     $(this).removeClass('addOpen');
+                    $('#wrap').removeClass('addModal');
                 }
             });
             $box.on({
@@ -122,6 +154,7 @@
                 click:function(event){
                     event.preventDefault();
                     $pop.removeClass('addOpen');
+                    $('#wrap').removeClass('addModal');
                 }
             });
             $checkBox.on({
@@ -151,12 +184,9 @@
             var $logo = $('#header #logo > a > img');
             var that = this;
 
-            var $row = $('#header .row');
-            var $deleteBtn = $('#header .delete-btn');
-
             function pcOptionFn(){
                 $nav.css({display:'inline-block'});
-                $logo.attr('src','./img/logo-white.png');
+                $logo.attr('src','./new_img/logo-white.png');
 
                 $mainBtn.on({
                     mouseenter:function(){
@@ -210,7 +240,7 @@
                 $asideBtn.off('mouseenter');
                 $asideSub.off('mouseleave');
 
-                $logo.attr('src','./img/logo-neon-orange.png');
+                $logo.attr('src','./new_img/logo-color.png');
             }
 
             function pcMobileFn(){
@@ -219,11 +249,13 @@
                     mobile = 0;
                     pcOptionFn();
                     that.btn = 0;
+                    that.n = 0;
                 }
                 else {
                     pc = 0;
                     mobile = 1;
                     mobileOptionFn();
+                    that.n = 1;
                 }
             }
             setTimeout(pcMobileFn,100);
@@ -309,7 +341,7 @@
                 $sec1.css({width:$winW, height:$winH});
                 $slideWrap.stop().animate({left:-$winW*cnt},0);
             }
-
+            resizeFn();
             setTimeout(resizeFn,100);
             
             $win.resize(function(){
@@ -389,44 +421,31 @@
         },
         section2Fn:function(){
             var $conLi = $('#section2 .content-wrap');
-            var st1 = null;
-            var st2 = null;
-            var st3 = null;
 
             $conLi.removeClass('addScroll');
             $(window).scroll(function(){
-                if($(window).scrollTop() >= $('#section2').offset().top-3000){
-                    //consolo.log($('#section2').offset().top);
-                    st1 = setTimeout(function(){
-                        $conLi.eq(0).addClass('addScroll');
-                    },100);
-                    st2 = setTimeout(function(){
-                        $conLi.eq(1).addClass('addScroll');
-                    },200);
-                    st3 = setTimeout(function(){
-                        $conLi.eq(2).addClass('addScroll');
-                    },300);
+                if($(window).scrollTop() >= $('#section2').offset().top-800){
+                    var ms = 200;
+                    $conLi.each(function(idx){
+                        var that = $(this);
+                        setTimeout(function(){
+                            that.addClass('addScroll');
+                        },ms*idx)
+                    })
                 }
-                if($(window).scrollTop() <= 20){
-                    $conLi.removeClass('addScroll');
+                else if($(window).scrollTop() <= 10){
+                    $conLi.each(function(idx){
+                        if($conLi.eq(idx).hasClass('addScroll')==true){
+                            $conLi.removeClass('addScroll');
+                        }
+                    });
                 }
             });
-
 
         },
         section3Fn:function(){
             var $productBox = $('#section3 .product-box');
             var $likeBtn = $('#section3 .like-btn');
-            var st0 = null;
-            var st1 = null;
-            var st2 = null;
-            var st3 = null;
-            var st4 = null;
-            var st5 = null;
-            var st6 = null;
-            var st7 = null;
-            var st8 = null;
-            var st9 = null;
 
             $productBox.on({
                 mouseenter:function(){
@@ -449,45 +468,28 @@
                     $(this).toggleClass('addLike');
                 }
             });
-            $productBox.removeClass('addScroll');
-            $(window).scroll(function(){
-                if($(window).scrollTop() >= $('#section3').offset().top-3000){
-                    st0 = setTimeout(function(){
-                        $productBox.eq(0).addClass('addScroll');
-                    },100);
-                    st1 = setTimeout(function(){
-                        $productBox.eq(1).addClass('addScroll');
-                    },300);
-                    st2 = setTimeout(function(){
-                        $productBox.eq(2).addClass('addScroll');
-                    },500);
-                    st3 = setTimeout(function(){
-                        $productBox.eq(3).addClass('addScroll');
-                    },700);
-                    st4 = setTimeout(function(){
-                        $productBox.eq(4).addClass('addScroll');
-                    },900);
-                    st5 = setTimeout(function(){
-                        $productBox.eq(5).addClass('addScroll');
-                    },1100);
-                    st6 = setTimeout(function(){
-                        $productBox.eq(6).addClass('addScroll');
-                    },1300);
-                    st7 = setTimeout(function(){
-                        $productBox.eq(7).addClass('addScroll');
-                    },1500);
-                    st8 = setTimeout(function(){
-                        $productBox.eq(8).addClass('addScroll');
-                    },1700);
-                    st9 = setTimeout(function(){
-                        $productBox.eq(9).addClass('addScroll');
-                    },1900);
 
+            $(window).scroll(function(){
+                if($(window).scrollTop() >= $('#section3').offset().top-700){
+                    //console.log($('#section3').offset().top);
+                    var ms = 100;
+                    $productBox.each(function(idx){
+                        var that = $(this)
+                        setTimeout(function(){
+                            that.addClass('addScroll');
+                        },ms*idx);
+                    });
                 }
-                if($(window).scrollTop() <= 20){
-                    $productBox.removeClass('addScroll');
+                else if($(window).scrollTop() <= 10){
+                    //$productBox.removeClass('addScroll');
+                    $productBox.each(function(idx){
+                        if($productBox.eq(idx).hasClass('addScroll')==true){
+                            $productBox.removeClass('addScroll');
+                        }
+                    });
                 }
             });
+
 
         },
         section4Fn:function(){
@@ -516,7 +518,7 @@
                     $slideWrap.stop().animate({left:-$winW*cnt},0);
                 }
             }
-
+            resizeFn();
             setTimeout(resizeFn,100);
             
             $win.resize(function(){
@@ -591,10 +593,53 @@
 
         },
         section5Fn:function(){
+            var $blogBox = $('#section5 .blog-box');
+
+            $blogBox.removeClass('addScroll');
+
+            $(window).scroll(function(){
+                if($(window).scrollTop() >= $('#section5').offset().top-700){
+                    //console.log($('#section5').offset().top);
+                    var ms = 100;
+                        $blogBox.each(function(idx){
+                            var that = $(this)
+                            setTimeout(function(){
+                                that.addClass('addScroll');
+                            },ms*idx);
+                        });
+                }
+                else if($(window).scrollTop() <= 10){
+                    $blogBox.each(function(idx){
+                        if($blogBox.eq(idx).hasClass('addScroll')==true){
+                            $blogBox.removeClass('addScroll');
+                        }
+                    });
+                }
+            });
 
         },
         section6Fn:function(){
+            var $logo = $('#section6 .client-log');
 
+            $(window).scroll(function(){
+                if($(window).scrollTop() >= $('#section6').offset().top-800){
+                    //console.log($('#section6').offset().top);
+                    var ms = 100;
+                    $logo.each(function(idx){
+                        var that = $(this);
+                        setTimeout(function(){
+                            that.addClass('addScroll');
+                        },ms*idx);
+                    });
+                }
+                else if($(window).scrollTop() <= 10){
+                    $logo.each(function(idx){
+                        if($logo.eq(idx).hasClass('addScroll')==true){
+                            $logo.removeClass('addScroll');
+                        }
+                    });
+                }
+            });
         },
         section7Fn:function(){
             var $winW = $(window).innerWidth();
@@ -704,6 +749,7 @@
         pageMoveFn:function(){
             var $goTop = $('#page-move .page-up-btn');
             var $htmlBody = $('html,body');
+
             $goTop.on({
                 click:function(event){
                     event.preventDefault();

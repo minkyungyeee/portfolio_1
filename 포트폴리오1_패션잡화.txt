@@ -2,7 +2,7 @@ https://lithohtml.themezaa.com/home-furniture-shop.html
 https://hongo.themezaa.com/jewellery/  여기 섹션4번 추가(이메일로 구독신청하는부분), 푸터 fixed놓는거 참고
 주제 : 패션잡화[Jewery(반지,목걸이,귀걸이),Shoes(로퍼,부츠,구두),Bag(쇼퍼,크로스,미니)]
 색 컨셉 : 파스텔톤 , white
-주 색 : #ab762b
+주 색 : #ab4f25
 보조색 : #a07e1a
 
 수정사항****
