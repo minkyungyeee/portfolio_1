@@ -313,7 +313,9 @@
     #wrap #main #section5 .wrap .gap .container .top-box > h4 {font-size:3.658536585vw;line-height:160%;}
     #wrap #main #section5 .wrap .gap .container .top-box > h2 {font-size:9.756097561vw;line-height:150%;}
     #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > span {margin-bottom:10px;}
-    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > span a.blog-txt {font-weight:600;}
+    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > span a.blog-txt {font-size:14px;font-weight:600;}
+    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > p {font-size:12px;margin-bottom:20px;}
+    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li:nth-last-of-type() .blog-box .blog-txt-box > p {margin-bottom:0;}
 
     /* section6*/
     #wrap #main #section6 .wrap .gap .container .client-box .client-log .log-gap > a > img {width:43.90243902vw;}
