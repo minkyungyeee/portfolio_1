@@ -55,10 +55,10 @@
                     $('#wrap').removeClass('addStop');
                     
                     if($winW > 980){
-                        $logo.attr('src','./img/logo-white.png');
+                        $logo.attr('src','./new_img/logo-white.png');
                     }
                     else{
-                        $logo.attr('src','./img/logo-neon-orange.png');
+                        $logo.attr('src','./new_img/logo-color.png');
                     }
                 }
                 else{
@@ -74,14 +74,14 @@
                             $('#header').removeClass('addHide');
                             $('#header').addClass('addShow');
                             $('#wrap').removeClass('addStop');
-                            $logo.attr('src','./img/logo-black.png');
+                            $logo.attr('src','./new_img/logo-black.png');
                             $('#page-move').removeClass('addTop');
                         }
                         else if(that.btn == 0 && that.n == 0) {
                             $('#header').addClass('addBlack')
                             $('#header').removeClass('addHide');
                             $('#header').addClass('addShow');
-                            $logo.attr('src','./img/logo-black.png');
+                            $logo.attr('src','./new_img/logo-black.png');
                             $('#page-move').addClass('addTop');
                             $('#wrap').removeClass('addStop');
                         }
@@ -186,7 +186,7 @@
 
             function pcOptionFn(){
                 $nav.css({display:'inline-block'});
-                $logo.attr('src','./img/logo-white.png');
+                $logo.attr('src','./new_img/logo-white.png');
 
                 $mainBtn.on({
                     mouseenter:function(){
@@ -240,7 +240,7 @@
                 $asideBtn.off('mouseenter');
                 $asideSub.off('mouseleave');
 
-                $logo.attr('src','./img/logo-neon-orange.png');
+                $logo.attr('src','./new_img/logo-color.png');
             }
 
             function pcMobileFn(){
