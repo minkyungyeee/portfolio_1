@@ -1,6 +1,7 @@
 ;(function($){
     var pofol = {
         btn:0,
+        n:0,
         init:function(){
             var that = this;
                 that.scrollEvent();
@@ -62,13 +63,21 @@
                 }
                 else{
                     if(result == 'up'){     //스크롤을 올리는중 (흰색배경으로 보여야함)
-                        if(that.btn == 1){  //모바일버튼이 눌렸을때
+                        if(that.btn == 1 && that.n == 1){  //모바일버튼이 눌렸을때
                             $('#header').removeClass('addHide');
                             $('#header').removeClass('addBlack');
                             $('#header').addClass('addShow');
                             $('#wrap').addClass('addStop');
                         }
-                        else {
+                        else if(that.btn == 0 && that.n == 1){
+                            $('#header').addClass('addBlack')
+                            $('#header').removeClass('addHide');
+                            $('#header').addClass('addShow');
+                            $('#wrap').removeClass('addStop');
+                            $logo.attr('src','./img/logo-black.png');
+                            $('#page-move').removeClass('addTop');
+                        }
+                        else if(that.btn == 0 && that.n == 0) {
                             $('#header').addClass('addBlack')
                             $('#header').removeClass('addHide');
                             $('#header').addClass('addShow');
@@ -78,13 +87,20 @@
                         }
                     }
                     if(result == 'down'){   //스크롤을 내리는중 (안보여야함)
-                        if(that.btn == 1){
+                        if(that.btn == 1 && that.n == 1){
                             $('#header').removeClass('addShow');
                             $('#header').removeClass('addBlack');
                             $('#header').removeClass('addHide');
                             $('#wrap').addClass('addStop');
                         }
-                        else{
+                        else if(that.btn == 0 && that.n == 1){
+                            $('#header').removeClass('addShow');
+                            $('#header').removeClass('addBlack');
+                            $('#header').addClass('addHide');
+                            $('#wrap').removeClass('addStop');
+                            $('#page-move').removeClass('addTop');
+                        }
+                        else if(that.btn == 0 && that.n == 0) {
                             $('#header').removeClass('addShow');
                             $('#header').removeClass('addBlack');
                             $('#header').addClass('addHide');
@@ -102,7 +118,6 @@
         popUpFn:function(){
             var $win = $(window);
             var $winH = $(window).innerHeight();
-            var $gap = $('#wrap #modal .wrap .gap');
             var $pop = $('#modal');
             var $box = $('#modal .container')
             var $close = $('#modal .close');
@@ -169,9 +184,6 @@
             var $logo = $('#header #logo > a > img');
             var that = this;
 
-            var $row = $('#header .row');
-            var $deleteBtn = $('#header .delete-btn');
-
             function pcOptionFn(){
                 $nav.css({display:'inline-block'});
                 $logo.attr('src','./img/logo-white.png');
@@ -237,11 +249,13 @@
                     mobile = 0;
                     pcOptionFn();
                     that.btn = 0;
+                    that.n = 0;
                 }
                 else {
                     pc = 0;
                     mobile = 1;
                     mobileOptionFn();
+                    that.n = 1;
                 }
             }
             setTimeout(pcMobileFn,100);
@@ -419,11 +433,14 @@
                         },ms*idx)
                     })
                 }
-                if($(window).scrollTop() <= 10){
-                    $conLi.removeClass('addScroll');
+                else if($(window).scrollTop() <= 10){
+                    $conLi.each(function(idx){
+                        if($conLi.eq(idx).hasClass('addScroll')==true){
+                            $conLi.removeClass('addScroll');
+                        }
+                    });
                 }
             });
-
 
         },
         section3Fn:function(){
@@ -463,7 +480,7 @@
                         },ms*idx);
                     });
                 }
-                if($(window).scrollTop() <= 10){
+                else if($(window).scrollTop() <= 10){
                     //$productBox.removeClass('addScroll');
                     $productBox.each(function(idx){
                         if($productBox.eq(idx).hasClass('addScroll')==true){
@@ -592,7 +609,11 @@
                         });
                 }
                 else if($(window).scrollTop() <= 10){
-                    $blogBox.removeClass('addScroll');
+                    $blogBox.each(function(idx){
+                        if($blogBox.eq(idx).hasClass('addScroll')==true){
+                            $blogBox.removeClass('addScroll');
+                        }
+                    });
                 }
             });
 
@@ -612,7 +633,11 @@
                     });
                 }
                 else if($(window).scrollTop() <= 10){
-                    $logo.removeClass('addScroll');
+                    $logo.each(function(idx){
+                        if($logo.eq(idx).hasClass('addScroll')==true){
+                            $logo.removeClass('addScroll');
+                        }
+                    });
                 }
             });
         },

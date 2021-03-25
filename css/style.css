@@ -12,29 +12,28 @@
 /* modal */
 #wrap #modal {display:none;z-index:4;position:fixed;top:0;left:0;width:100%;background:rgba(0,0,0,.7);overflow: visible;}
 #wrap #modal.addOpen {display:block;}
-#wrap #modal .wrap {width:100%;max-width:680px;margin:0 auto;/* overflow: hidden; */}
-#wrap #modal .wrap .gap {padding:29.92776058vh 0;}
-#wrap #modal .wrap .gap .container {position:relative;width:100%;background:#fff;}
-#wrap #modal .wrap .gap .container .left-box {float:left;width:60%;}
-#wrap #modal .wrap .gap .container .left-box .box-gap {padding:84px;}
-#wrap #modal .wrap .gap .container .left-box .box-gap > h3 {font-size:20px;font-weight:500;line-height:130%;margin-bottom:10px;}
-#wrap #modal .wrap .gap .container .left-box .box-gap > p {font-size:15px;font-weight:400;line-height:150%;color:#828282;margin-bottom:30px;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap {position:relative;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email {padding:12px 60px 12px 15px;font-size:14px;border:1px solid #e4e4e4;box-sizing: border-box;color:#e4e4e4;letter-spacing:-1px;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email-box {position:absolute;top:13px;right:0.525486075vw;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .email-wrap .email-box > i {font-size:16px;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .label {margin-top:30px;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .label > a > span {display:inline-block;width:10px;height:10px;border:1px solid #828282;text-align:center;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .label > a > span > i {display:none;font-size:10px;margin-top:-3px;}
-#wrap #modal .wrap .gap .container .left-box .box-gap .label > a.addClick > span > i {display:inline-block;}
+#wrap #modal .wrap .gap .container {width:100%;height:100%;background:#fff;}
+#wrap #modal .wrap .gap .container > ul {position:absolute;width:680px;height:408px;top:50%;left:50%;margin-top:-204px;margin-left:-340px;background:#fff;}
+#wrap #modal .wrap .gap .container > ul .left-box {float:left;width:60%;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap {padding:84px;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap > h3 {font-size:20px;font-weight:500;line-height:130%;margin-bottom:20px;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap > p {font-size:15px;font-weight:400;line-height:150%;color:#828282;margin-bottom:30px;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .email-wrap {position:relative;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .email-wrap .email {width:100%;padding:12px 60px 12px 15px;font-size:14px;border:1px solid #e4e4e4;box-sizing: border-box;color:#e4e4e4;letter-spacing:-1px;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .email-wrap .email-box {position:absolute;top:13px;right:1.525486075vw;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .email-wrap .email-box > i {font-size:16px;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .label {margin-top:30px;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .label > a > span {display:inline-block;width:10px;height:10px;border:1px solid #828282;text-align:center;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .label > a > span > i {display:none;font-size:10px;margin-top:-3px;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .label > a.addClick > span > i {display:inline-block;}
 
-#wrap #modal .wrap .gap .container .left-box .box-gap .label > a > h4 {margin-left:10px;display:inline-block;font-size:13px;color:#828282;cursor:default;}
+#wrap #modal .wrap .gap .container > ul .left-box .box-gap .label > a > h4 {margin-left:10px;display:inline-block;font-size:13px;color:#828282;cursor:default;}
 
-#wrap #modal .wrap .gap .container .right-box {float:left;width:40%;}
-#wrap #modal .wrap .gap .container .right-box .box-gap {width:100%;height:100%;}
-#wrap #modal .wrap .gap .container .right-box .box-gap > img {z-index:1;position:relative;width:100%;}
-#wrap #modal .wrap .gap .container .right-box .box-gap > a {z-index:2;position:absolute;top:10px;right:10px;}
-#wrap #modal .wrap .gap .container .right-box .box-gap > a > i {display:block;color:#fff;font-size:15px;}
+#wrap #modal .wrap .gap .container > ul .right-box {float:left;width:40%;}
+#wrap #modal .wrap .gap .container > ul .right-box .box-gap {width:100%;/* height:100%; */}
+#wrap #modal .wrap .gap .container > ul .right-box .box-gap > img {z-index:1;position:relative;width:100%;}
+#wrap #modal .wrap .gap .container > ul .right-box .box-gap > a {z-index:2;position:absolute;top:10px;right:10px;}
+#wrap #modal .wrap .gap .container > ul .right-box .box-gap > a > i {display:block;color:#fff;font-size:15px;}
 
 /* header */
 #wrap #header {z-index:3;position:fixed;top:0;left:0;width:100%;height:80px;background:rgba(255,255,255,0);font-family:'Poppins',sans-serif;}
@@ -61,12 +60,14 @@
 #wrap #header .wrap .gap .container #nav > ul > li .sub5 {width:240px;margin-left:-80px;left:-20px;}
 #wrap #header .wrap .gap .container #nav > ul > li .sub4 {width:1040px;margin-left:-520px;left:-20px;}
 #wrap #header .wrap .gap .container #nav > ul > li .sub6 {width:600px;margin-left:-300px;left:-20px;}
-#wrap #header .wrap .gap .container #nav > ul > li .sub7 {width:730px;margin-left:-500px;left:-20px;}
+#wrap #header .wrap .gap .container #nav > ul > li .sub7 {width:220px;margin-left:-110px;left:50%;}
+/* #wrap #header .wrap .gap .container #nav > ul > li .sub7 {width:730px;margin-left:-500px;left:-20px;} */
 
 #wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap {padding:60px 80px;}
 #wrap #header .wrap .gap .container #nav > ul > li > .sub2 > .sub-gap,
 #wrap #header .wrap .gap .container #nav > ul > li > .sub3 > .sub-gap,
-#wrap #header .wrap .gap .container #nav > ul > li > .sub5 > .sub-gap {padding:25px 35px;}
+#wrap #header .wrap .gap .container #nav > ul > li > .sub5 > .sub-gap,
+#wrap #header .wrap .gap .container #nav > ul > li > .sub7 > .sub-gap {padding:25px 35px;}
 
 #wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul {width:100%;}
 #wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li {float:left;width:160px;margin-right:30px;}
@@ -78,16 +79,14 @@
 #wrap #header .wrap .gap .container #nav > ul > li .sub6 .sub-gap > ul > li {width:190px;margin-right:60px;}
 
 #wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl {width:100%;}
-#wrap #header .wrap .gap .container #nav > ul > li .sub6 .sub-gap > ul > li:nth-of-type(1) > dl:last-child {margin-top:10px;}
 
 #wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dt {font-size:14px;font-weight:500;margin:15px 0;}
-#wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dd {position:relative;font-size:13px;font-weight:500;/* padding:7px 0; */}
-#wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dd > a {display:block;color:#828282;/* margin-bottom:5px; */padding:12px 0;}
+#wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dd {position:relative;font-size:13px;font-weight:500;}
+#wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dd > a {display:block;color:#828282;padding:12px 0;}
 #wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dd > a:hover {color:#232323;}
 #wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dd > a > i {float:right;font-size:11px;}
 #wrap #header .wrap .gap .container #nav > ul > li .sub6 .sub-gap > ul > li > dl > dd .row-img {width:190px;height:250px;background:url(../img/litho-demo-architecture.jpg) no-repeat 50% 50%;background-size:cover;}
 #wrap #header .wrap .gap .container #nav > ul > li .sub6 .sub-gap > ul > li > dl:last-child > dd .row-img {width:190px;height:250px;background:url(../img/litho-demo-design-agency.jpg) no-repeat 50% 50%;background-size:cover;}
-#wrap #header .wrap .gap .container #nav > ul > li .sub .sub-gap > ul > li > dl > dd > a > img {width:100%;}
 
 /* header_nav_sub_hide관리 */
 #wrap #header .wrap .gap .container #nav > ul > li .sub1 {display:none;}
@@ -452,7 +451,7 @@
 #wrap #footer .wrap .gap .container .footer-top .top-content-wrap .footer-content .top-gap .email-wrap {position:relative;display:inline-block;}
 #wrap #footer .wrap .gap .container .footer-top .top-content-wrap .footer-content .top-gap .email-wrap .email {padding:13px 30px 13px 20px;}
 #wrap #footer .wrap .gap .container .footer-top .top-content-wrap .footer-content .top-gap .email-wrap .email-box {position:absolute;top:1px;right:20px;}
-#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .footer-content .top-gap .email-wrap .email-box i {font-size:18px;line-height:44px;}
+#wrap #footer .wrap .gap .container .footer-top .top-content-wrap .footer-content .top-gap .email-wrap .email-box i {font-size:16px;line-height:44px;}
 /* footer _하단 로고*/
 #wrap #footer .wrap .gap .container .footer-bottom {padding-bottom:40px;border-top:1px solid #828282;box-sizing:border-box;}
 #wrap #footer .wrap .gap .container .footer-bottom .bottom-gap {margin-top:40px;width:100%;}
@@ -466,11 +465,11 @@
 
 
 /* page-move */
-#wrap #main #page-move {display:none;z-index:3;position:fixed;bottom:40px;right:40px;}
+#wrap #main #page-move {display:none;z-index:3;position:fixed;bottom:20px;right:20px;}
 #wrap #main #page-move.addTop {display:block;}
 #wrap #main #page-move .page-up-box {display:inline-block;}
-#wrap #main #page-move .page-up-box > a {display:block;width:35px;height:35px;background:#fff;border-radius:50%;text-align:center;line-height:33px;box-shadow:2px 2px 15px rgba(0,0,0,.2),-3px -3px 14px rgba(0,0,0,.2);transition:all .6s;}
+#wrap #main #page-move .page-up-box > a {display:block;width:35px;height:35px;background:rgba(255,255,255,.6);border-radius:50%;text-align:center;line-height:33px;box-shadow:2px 2px 15px rgba(0,0,0,.2),-3px -3px 14px rgba(0,0,0,.2);transition:all .6s;}
 #wrap #main #page-move .page-up-box > a:hover {transform:scale(1.2);}
-#wrap #main #page-move .page-up-box > a > i {color:#828282;font-size:13px;}
+#wrap #main #page-move .page-up-box > a > i {color:#000;font-size:13px;}
 
 
