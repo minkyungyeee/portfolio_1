@@ -6,6 +6,7 @@
             var that = this;
                 that.scrollEvent();
                 that.popUpFn();
+                that.searchFn();
                 that.headerFn();
                 that.section1Fn();
                 that.section2Fn();
@@ -164,6 +165,43 @@
                 }
             });
         
+
+        },
+        searchFn:function(){
+            var $wrap = $('#wrap');
+            var $box = $('#header #aside .white-box');
+            var $serch = $('#header #aside .search-btn');
+            var $form = $('#header #aside .form-wrap');
+            var $close = $('#header #aside .close-btn');
+
+            $form.slideUp(0);
+            $serch.on({
+                click:function(event){
+                    event.preventDefault();
+                    //$form.addClass('addSearch');
+                    $form.slideDown(300);
+                    $wrap.addClass('addModal');
+                }
+            });
+            $close.on({
+                click:function(event){
+                    event.preventDefault();
+                    $form.slideUp(300);
+                    $wrap.removeClass('addModal');
+                }
+            });
+            $form.on({
+                click:function(){
+                    $(this).slideUp(300);
+                    $wrap.removeClass('addModal');
+                }
+            });
+            $box.on({
+                click:function(event){
+                    event.stopPropagation();
+                }
+            })
+
 
         },
         headerFn:function(){
@@ -515,8 +553,8 @@
                     $winW = $(window).innerWidth();
                     $slideWrap.css({width:($winW/2)*10, marginLeft:-($winW/2)*2});
                     $slide.css({width:$winW/2});
-                    $slideWrap.stop().animate({left:-$winW*cnt},0);
                 }
+                $slideWrap.stop().animate({left:-$winW*cnt},0);
             }
             resizeFn();
             setTimeout(resizeFn,100);
@@ -670,7 +708,15 @@
 
             function resizeFn(){
                 $winW = $(window).innerWidth();
+                if($winW <= 660){
+                    $slideWrap.stop().animate({left:(-165*cnt)-15},0)
+                }
+                else{
+                    $slideWrap.stop().animate({left:(-192.5*cnt)-15},0)
+                }
             }
+
+            resizeFn();
             setTimeout(resizeFn,100);
             
             $(window).resize(function(){
