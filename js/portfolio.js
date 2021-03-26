@@ -231,6 +231,7 @@
                         $(this).stop().next().show();
                         $asideSub.stop().hide();
                     }
+
                 });
                 $navArea.on({
                     mouseleave:function(){
@@ -243,6 +244,7 @@
                         $subSub.stop().hide();
                         $(this).stop().next().show();
                     }
+
                 });
                 $subSub.on({
                     mouseleave:function(){
@@ -256,6 +258,7 @@
                         $asideSub.stop().hide();
                         $(this).stop().next().show();
                     }
+
                 });
                 $asideSub.on({
                     mouseleave:function(){
@@ -307,6 +310,7 @@
                     event.preventDefault();
                     if(mobile ==1){
                         $sub.stop().slideUp(300);
+                        //$subSub.stop().slideUp(300);
                         $(this).next().stop().slideToggle(300);
                     }
                 }
