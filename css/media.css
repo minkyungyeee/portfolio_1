@@ -257,7 +257,7 @@
     #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box {text-align:center;}
     #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > span {display:inline-block;width:90%;}
     #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > p {display:inline-block;width:90%;}
-    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li:nth-last-child() .blog-box .blog-txt-box > p {margin-bottom:0;}
+    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li:last-child .blog-box .blog-txt-box > p {margin-bottom:0;}
 
     /* section7_이미지 크기 조절 */
     #wrap #main #section7 .wrap .gap .container .slide-cotainer .slide-view {width:calc(165px*3);}
@@ -336,7 +336,7 @@
     #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > span {margin-bottom:10px;}
     #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > span a.blog-txt {font-size:14px;font-weight:600;}
     #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li .blog-box .blog-txt-box > p {font-size:12px;margin-bottom:20px;}
-    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li:nth-last-of-type() .blog-box .blog-txt-box > p {margin-bottom:0;}
+    #wrap #main #section5 .wrap .gap .container .content-box .content-box-gap > ul > li:last-of-type .blog-box .blog-txt-box > p {margin-bottom:0;}
 
     /* section6*/
     #wrap #main #section6 .wrap .gap .container .client-box .client-log .log-gap > a > img {width:43.90243902vw;}
