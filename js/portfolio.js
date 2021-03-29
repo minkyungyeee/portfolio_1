@@ -70,7 +70,7 @@
                             $('#header').addClass('addShow');
                             $('#wrap').addClass('addStop');
                         }
-                        else if(that.btn == 0 && that.n == 1){
+                        else if(that.btn == 0 && that.n == 1){ //햄버거메뉴 닫혀있고 모바일상태
                             $('#header').addClass('addBlack')
                             $('#header').removeClass('addHide');
                             $('#header').addClass('addShow');
@@ -78,7 +78,7 @@
                             $logo.attr('src','./new_img/logo-black.png');
                             $('#page-move').removeClass('addTop');
                         }
-                        else if(that.btn == 0 && that.n == 0) {
+                        else if(that.btn == 0 && that.n == 0) { //pc버전일때
                             $('#header').addClass('addBlack')
                             $('#header').removeClass('addHide');
                             $('#header').addClass('addShow');
