@@ -1,0 +1,65 @@
+깃허브: https://minkyungyeee.github.io/portfolio_1/
+닷홈 : http://minkfree94.dothome.co.kr/portfolio_1/
+
+
+
+https://lithohtml.themezaa.com/home-furniture-shop.html
+주제 : 패션잡화[Jewery(반지,목걸이,귀걸이),Shoes(로퍼,부츠,구두),Bag(쇼퍼,크로스,미니)]
+색 컨셉 : 톤다운된 비비드컬러, 화이트
+주 색 : #ab4f25
+보조색 : #a07e1a
+
+수정사항****
+스크롤 이벤트 추가 (https://lithohtml.themezaa.com/home-decor.html 여기 섹션4,5참고)
+section4번 이미지 2개씩 슬라이드로 수정
+
+화면 전체 넓이 1903
+
+header-navi영역
+넓이 : 1903
+높이 : 80
+양옆공간 : 35
+
+main -section7개
+section1
+추가할거 : 슬라이드 오토플레이, 슬라이드 정지버튼
+넓이 : 윈도우넓이(1903)
+높이 : 969
+전체패딩 : 풀스크린
+section2
+추가할거 : 스크롤이벤트(스크롤 내리면 아래에서 위로올라오는 페러록스)
+넓이 :
+높이 : 665.55
+전체 패딩 : 130 119
+section3
+추가할거 : 스크롤 페러록스(왼쪽상단부터 오른쪽 하단으로 순차적으로 나타나게)
+넓이
+높이 : 1565.34
+전체 패딩 : 130 119
+section4
+추가할거 : 세일 정보 슬라이드하기 (2개씩 총3세트 반복)
+넓이
+높이 : 529.250
+전체패딩 : 풀스크린
+section5
+추가할거 :
+넓이
+높이 : 828.64
+전체 패딩 : 130 0
+section6
+추가할거 :
+넓이 
+높이 : 251
+전체 패딩 : 70 0
+section7
+추가할거 : 롤링 조금 더 자연스럽게 슬라이드 버튼 추가 , footer는 fixed고 얘는 올라오는거처럼
+넓이
+높이
+전체 패딩 : 177.50
+
+
+footer-타사이트 연결부분
+넓이 :
+높이 : 598.64
+margin-top: -88.75px;
+padding-top: 177.5px;
