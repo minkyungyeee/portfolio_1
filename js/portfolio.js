@@ -185,6 +185,8 @@
             var that = this;
             var click = true;
 
+            //왜 깨끗하지 
+
             function pcOptionFn(){
                 $nav.css({display:'inline-block'});
                 $logo.attr('src','./new_img/logo-white.png');
