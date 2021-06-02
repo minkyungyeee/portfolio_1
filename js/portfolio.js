@@ -183,10 +183,16 @@
             var mobile = 0;
             var $logo = $('#header #logo > a > img');
             var that = this;
+            var click = true;
 
             function pcOptionFn(){
                 $nav.css({display:'inline-block'});
                 $logo.attr('src','./new_img/logo-white.png');
+
+                $sub.css({display:'none',height:'auto'});
+                $subSub.css({display:'none'});
+                $nav.css({display:'inline-block'});
+                $bar.removeClass('addMobile');
 
                 $mainBtn.on({
                     mouseenter:function(){
@@ -231,7 +237,9 @@
                 $subSub.stop().hide();
                 $asideSub.stop().hide();
                 $bar.removeClass('addMobile');
-                $nav.stop().slideUp(0);
+                //$nav.stop().slideUp(0);
+                $nav.css({display:'none'});
+                $sub.css({hieght:'auto'})
 
                 $mainBtn.off('mouseenter');
                 $navArea.off('mouseleave');
@@ -241,6 +249,40 @@
                 $asideSub.off('mouseleave');
 
                 $logo.attr('src','./new_img/logo-color.png');
+
+                $mainBtn.on({
+                    click:function(event){
+                        event.preventDefault();
+                        if(click === true){
+                            click = false;
+                            $sub.css({height:'auto'});
+                            $sub.stop().slideUp();
+                            $subSub.stop().slideUp();
+
+                            $(this).next().stop().slideToggle(300);
+
+                            setTimeout(function(){
+                                click = true;
+                            },500)
+                        }
+                    }
+                });
+
+                $subBtn.on({
+                    click:function(event){
+                        event.preventDefault();
+                        if(click === true){
+                            click = false;
+                            $sub.css({height:'auto'});
+                            $subSub.stop().slideUp();
+                            $(this).next().stop().slideToggle(300);
+
+                            setTimeout(function(){
+                                click = true;
+                            },500)
+                        }
+                    }
+                });
             }
 
             function pcMobileFn(){
@@ -262,26 +304,6 @@
 
             $win.resize(function(){
                 pcMobileFn();
-            });
-
-            $mainBtn.on({
-                click:function(event){
-                    event.preventDefault();
-                    if(mobile ==1){
-                        $sub.stop().slideUp(300);
-                        $(this).next().stop().slideToggle(300);
-                    }
-                }
-            });
-
-            $subBtn.on({
-                click:function(event){
-                    event.preventDefault();
-                    if(mobile ==1){
-                        $subSub.stop().slideUp(300);
-                        $(this).next().stop().slideToggle(300);
-                    }
-                }
             });
 
             $mobileBtn.on({
